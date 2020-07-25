@@ -1,0 +1,18 @@
+SECCOMP
+========
+
+docker info | grep seccomp
+
+grep SECCOMP /boot/config-$(uname -r)
+
+docker run -it --security-opt seccomp:profiles/deny.json alpine sh
+
+
+docker run -d --privileged --name centos-example centos /sbin/init
+
+
+
+# stress
+yum -y install epel-release
+yum -y install stress
+stress -c 2 -i 1 -m 1 --vm-bytes 128M -t 10s
