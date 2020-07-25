@@ -9,7 +9,7 @@ Cmnd_Alias COMPOSE = /usr/local/bin/docker-compose up -d, /usr/local/bin/docker-
 Cmnd_Alias ALTOBAQUERO = /usr/local/bin/docker-compose stop, /usr/local/bin/docker-compose rm, /usr/local/bin/docker-compose reload, /usr/local/bin/docker-compose down
 
 
-Cmnd_Alias DOCKER = /usr/bin/docker, /usr/libexec/docker
+Cmnd_Alias DOCKER = /usr/bin/docker, /usr/libexec/docker, /bin/systemctl
 ADMIN ALL = DOCKER, COMPOSE
 
 # Defaults specification
